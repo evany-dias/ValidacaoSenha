@@ -13,8 +13,7 @@ Considere uma senha sendo válida quando a mesma possuir as seguintes definiçõ
 - Ao menos 1 dígito
 - Ao menos 1 letra minúscula
 - Ao menos 1 letra maiúscula
-- Ao menos 1 caractere especial
-Considere como especial os seguintes caracteres: !@#$%^&*()-+
+- Ao menos 1 caractere especial (Considere como especial os seguintes caracteres: !@#$%^&*()-+)
 - Não possuir caracteres repetidos dentro do conjunto
 
 # Solução
@@ -24,10 +23,10 @@ Separei as regras de validação em três condições de "if", pelo motivo do gr
 
 Para aplicar as condições solicitadas com a entrada do tipo "Char", utilizei os seguintes métodos:
 
-Ao menos 1 dígito - método utilizado: IsDigit;
-Ao menos 1 letra minúscula - método utilizado: IsLower;
-Ao menos 1 letra maiúscula - método utilizado: IsUpper;
-Ao menos 1 caractere especial - método utilizado: IsLetterOrDigit;
+- Ao menos 1 dígito - método utilizado: IsDigit;
+- Ao menos 1 letra minúscula - método utilizado: IsLower;
+- Ao menos 1 letra maiúscula - método utilizado: IsUpper;
+- Ao menos 1 caractere especial - método utilizado: IsLetterOrDigit.
 
 Utilizei o método "IsNullOrEmpty" para verificar se a entrada é nula ou vazia, e a propriedade "Length" para verificar se o tamanho é menor ou igual a nove. 
 Para verificar a regra "Não possuir caracteres repetidos dentro do conjunto", utilizei a propriedade "Length" junto com os métodos "Distinct" e "Count" da biblioteca "Linq". Nessa regra precisei pesquisar o método Distinct() que remove todos os elementos duplicados da coleção original, e o método Count() que retorna o número de elementos na coleção. Com isso, encaixei ambos na minha lógica para verificar duplicidade dentro do conjunto.
