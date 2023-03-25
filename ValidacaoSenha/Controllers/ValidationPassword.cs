@@ -9,7 +9,7 @@ namespace ValidacaoSenha.Controllers
         [HttpGet(Name = "GetPasswordValidation")]
         public IActionResult Get(string password)
         {
-            if (string.IsNullOrEmpty(password) || password.Length < 9)
+            if (string.IsNullOrEmpty(password) || password.Length < 9 || password.Contains(" "))
             {
                 return BadRequest(new { IsValid = false });
             }
