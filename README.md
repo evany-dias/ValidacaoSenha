@@ -28,7 +28,7 @@ Para aplicar as condições solicitadas com a entrada do tipo "Char", utilizei o
 - Ao menos 1 letra maiúscula - método utilizado: IsUpper;
 - Ao menos 1 caractere especial - método utilizado: IsLetterOrDigit.
 
-Utilizei o método "IsNullOrEmpty" para verificar se a entrada é nula ou vazia, e a propriedade "Length" para verificar se o tamanho é menor ou igual a nove. 
+Utilizei o método "IsNullOrEmpty" para verificar se a entrada é nula ou vazia, o método "Contains" para espaços e a propriedade "Length" para verificar se o tamanho é menor ou igual a nove. 
 Para verificar a regra "Não possuir caracteres repetidos dentro do conjunto", utilizei a propriedade "Length" junto com os métodos "Distinct" e "Count" da biblioteca "Linq". Nessa regra precisei pesquisar o método Distinct() que remove todos os elementos duplicados da coleção original, e o método Count() que retorna o número de elementos na coleção. Com isso, encaixei ambos na minha lógica para verificar duplicidade dentro do conjunto.
 
 Para as outras regras foram criadas as variáreis "hasUppercase", "hasLowercase", "hasDigit" e "hasSpecialCharacter", utilizando expressões lambda e métodos da biblioteca "linq", para validar cada variável e no final verifiquei através da condição "if" os seus retornos.
